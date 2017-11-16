@@ -12,7 +12,7 @@ A simple synth that generates tones with oscillator, filter and amplitude envelo
 
 - Tip for LFO: create an oscillator and a gain node for the LFO. The oscillator controls LFO rate and the gain control LFO depth. Connect the LFO gain (AudioNode) to the frequency of the main oscillator (AudioParam). If you connect AndioNote to AudioParam this way, the output of AudioNote is mixed to the existing value of the AudioParam. That is, it adds vibrato control to the main oscillator. For more details, refer to [AudioParam notes](https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect). 
 
-- Tip for Filter Envelope: the way of changing filter cut-off frequency with an envelope is exactly the same as that used for changing amplitude envelop. Thus, create an object funcion prototype, say "Voice.prototype.triggerFilterEnvelope", which is almost the same as "Voice.prototype.triggerAmpEnvelope" except that the target parameter is filter frequency (this.filter.frequency).      
+- Tip for Filter Envelope: the way of changing filter cut-off frequency with an envelope is exactly the same as that used for changing the amplitude envelop. Thus, create an object funcion prototype, say "Voice.prototype.triggerFilterEnvelope", which is almost the same as "Voice.prototype.triggerAmpEnvelope" except that the target parameter is filter frequency (i.e. this.filter.frequency).      
 
 
 ## Step #2
